@@ -144,9 +144,9 @@ class ExperienceLauncher(object):
             raise Exception("File " + filename + " could not be pull from remote server at path " + path)
 
     def changeMptcpEnabled(self, num, value):
-        cmd = ["ssh", "-p", self.remotePorts[num], self.remoteHostnames[num], "sudo sysctl net.mptcp.mptcp_enabled=" + str(value)]
+        cmd = ["ssh", "-p", self.remotePorts[num], self.remoteHostnames[num], "sudo sysctl net.mptcp.enabled=" + str(value)]
         if subprocess.call(cmd) != 0:
-            raise Exception("Cannot change value of mptcp_enabled at " + str(value))
+            raise Exception("Cannot change value of enabled at " + str(value))
 
     def changeOpenBup(self, num, value):
         """ Also disable the oracle if openBup is enabled """
