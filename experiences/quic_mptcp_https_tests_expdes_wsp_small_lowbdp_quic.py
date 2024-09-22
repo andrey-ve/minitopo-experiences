@@ -2,13 +2,13 @@
 
 from __future__ import print_function
 
+import os
+# import numpy as np
+import core.core as core
+
 # Doing * imports is bad :'(
 from core.generate_topo import *
 from core.generate_xp import *
-
-import core.core as core
-# import numpy as np
-import os
 
 REMOTE_SERVER_RUNNER_HOSTNAME = ["mininet@localhost"]
 REMOTE_SERVER_RUNNER_PORT = ["8022"]
