@@ -11,7 +11,8 @@ from core.generate_topo import *
 from core.generate_xp import *
 
 REMOTE_SERVER_RUNNER_HOSTNAME = ["mininet@localhost"]
-REMOTE_SERVER_RUNNER_PORT = ["8022"]
+#REMOTE_SERVER_RUNNER_PORT = ["8022"]
+REMOTE_SERVER_RUNNER_PORT = ["22"]
 
 
 def getPostProcessingList(**kwargs):
