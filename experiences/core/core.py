@@ -241,7 +241,7 @@ class ExperienceLauncher(object):
 
         self.cleanMininet(num)
         cmd = 'ssh -p ' + self.remotePorts[num] + ' ' + self.remoteHostnames[num] + \
-              ' "cd ' + kwargs["tmpfs"] + '; sudo ~/git/minitopo/src/mpPerf.py -x ' + os.path.basename(kwargs["xpAbsPath"]) + ' -t ' + \
+              ' "cd ' + kwargs["tmpfs"] + '; sudo python2 ~/git/minitopo/src/mpPerf.py -x ' + os.path.basename(kwargs["xpAbsPath"]) + ' -t ' + \
               os.path.basename(kwargs["topoAbsPath"]) + '"'
         MinitopoCommand(num, self.remoteHostnames[num], self.remotePorts[num], cmd, kwargs["workingDir"], self.testOkList).run(timeout=THREAD_TIMEOUT)
 
